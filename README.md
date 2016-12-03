@@ -180,28 +180,39 @@ content-box border-box<br/>
 
 ####<a name='js'>JS Questions:</a>
 
-* Explain event delegation
-event delegation it's when parant recieve a event
-* Explain how `this` works in JavaScript
-depends on how it's call
+* Explain event delegation<br/>
+event delegation it's when parant recieve a event<br/>
+Propagation and bubbling<br/>
+* Explain how `this` works in JavaScript<br/>
+depends on how it's call because it's reference to call context<br/>
 * Explain how prototypal inheritance works
 * How do you go about testing your JavaScript?
-QUnit Jasmine and bunch of staff
+QUnit, Karma+Jasmine, Mocha+Chai+Synon<br/>
 * AMD vs. CommonJS?
+async module definition - RequireJS<br/>
+commonjs - nodejs, browserify<br/>
 * What's a hashtable?
-datasctructure
+datasctructure. KeyValue (C# - dictionary, JS - simple object, Typescript - type any)<br/>
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`. 
   * What needs to be changed to properly make it an IIFE?
+(functon(){}()) or (functon(){})()<br/>
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
   * How would you go about checking for any of these states?
+  null - user assign null<br/>
+  undefined - user declare variable - var x;<br/>
+  undeclared - foo() when foo wasn't declared<br/>
 * What is a closure, and how/why would you use one?
+Incapsulation in JS. use data in parent scope<br/>
 * What's a typical use case for anonymous functions?
-callback
+callback, self-invoking<br/>
 * Explain the "JavaScript module pattern" and when you'd use it.
   * Bonus points for mentioning clean namespacing.
   * What if your modules are namespace-less?
+Prevents junk in global context (window for browsers)<br/>
 * How do you organize your code? (module pattern, classical inheritance?)
 * What's the difference between host objects and native objects?
+Host objects - environment variables<br/>
+Native objects - EcamScript objects<br/>
 * Difference between:
 ```javascript
 function Person(){} var person = Person() var person = new Person()

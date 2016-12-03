@@ -151,25 +151,30 @@ background property will help you
 * What are your favourite image replacement techniques and which do you use when?
 * CSS property hacks, conditionally included .css files, or... something else?
 * How do you serve your pages for feature-constrained browsers?
-  * What techniques/processes do you use?
+  * What techniques/processes do you use?<br/>
+  Shim and polyfills. Vendor prefixes
 * What are the different ways to visually hide content (and make it available only for screen readers)?
 media queries
 * Have you ever used a grid system, and if so, what do you prefer?
-foundation
+bootstrap3 and 4 now
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 Used
 * Any familiarity with styling SVG?
 * How do you optimize your webpages for print?
-media query
+media query print
 * What are some of the "gotchas" for writing efficient CSS?
+OSCSS, AtomCSS, BEM
 * What are the advantages/disadvantages of using CSS preprocessors? (SASS, Compass, Stylus, LESS)
   * If so, describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
-  * Webfonts (font services like: Google Webfonts, Typekit etc.)
-* Explain how a browser determines what elements match a CSS selector?
+Webfonts (font services like: Google Webfonts, Typekit etc.)<br/>
+Font Awesome<br/>
+* Explain how a browser determines what elements match a CSS selector?<br/>
+CSS selectors from right to left.<br/>
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
-box model it's how you calc size of box
-box-sizing can help you set different aproaches
+box model it's how you calc size of box<br/>
+box-sizing can help you set different aproaches<br/>
+content-box border-box<br/>
 
 **[[⬆]](#toc)**
 

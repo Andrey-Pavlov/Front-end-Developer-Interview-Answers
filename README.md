@@ -45,64 +45,64 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 
 * Can you describe your workflow when you create a web page?
 
-* Can you describe the difference between progressive enhancement and graceful degradation?
-progressive enhancement - from less functionality growing to full functional
-graceful degradation - made full functional and then made fallbacks
+* Can you describe the difference between progressive enhancement and graceful degradation?<br/>
+progressive enhancement - from less functionality growing to full functional<br/>
+graceful degradation - made full functional and then made fallbacks<br/>
   * Bonus points for describing feature detection
     check is feture is exist, use fallback if not
     
-* Explain what "Semantic HTML" means.
+* Explain what "Semantic HTML" means.<br/>
  Html consist of only document structure information, without styling and behaviour
  
 * How would you optimize a websites assets/resources? (or just customer says: "Optimize my site!")
-What does it mean - "Optimize my site!". Figure out customer problems. (loading or rendering or markup or ...)
-Our tookls - dev tools, page speed, fiddler, wireshark
-Key measuremens - loading speed, number of requests, images sizes etc.
-Put css on top
-Put scripts on bottom
-Avoid @import in CSS (new request, DOM rerendering (reflow or repaint))
-Avoid DOM microinsertions in loop (use document.createElement())
-Listen bubbling event (don't add evetlistener for each "row" - save memory)
-Pagination, Visualization, Infinity Scroll (avoid fetch 10000 items to show only 10)
-Deffered plugins initialization (on first click, for example)
-Minimize Http calls,
-Bundling:
-  -css and js, spritesheets
-  -main and vendor
-  -add cache busting suffix
-Minification
-CDN (cache posibility, closer to user, CORS requests not icluded in browser number of requests restrictions)
-Cache headers: cache-control, expired, max-age, e-tag
-Images:
+What does it mean - "Optimize my site!". Figure out customer problems. (loading or rendering or markup or ...)<br/>
+Our tookls - dev tools, page speed, fiddler, wireshark<br/>
+Key measuremens - loading speed, number of requests, images sizes etc.<br/>
+Put css on top<br/>
+Put scripts on bottom<br/>
+Avoid @import in CSS (new request, DOM rerendering (reflow or repaint))<br/>
+Avoid DOM microinsertions in loop (use document.createElement())<br/>
+Listen bubbling event (don't add evetlistener for each "row" - save memory)<br/>
+Pagination, Visualization, Infinity Scroll (avoid fetch 10000 items to show only 10)<br/>
+Deffered plugins initialization (on first click, for example)<br/>
+Minimize Http calls,<br/>
+Bundling:<br/>
+  -css and js, spritesheets<br/>
+  -main and vendor<br/>
+  -add cache busting suffix<br/>
+Minification<br/>
+CDN (cache posibility, closer to user, CORS requests not icluded in browser number of requests restrictions)<br/>
+Cache headers: cache-control, expired, max-age, e-tag<br/>
+Images:<br/>
  -Avoid image resize by css (4k image for icon)
  -Server image resize (/img.png?w=100&h=100)
  -Prevent images download before scroll to them (data-src => src)
-Server-side caching (Redis, KeyValue storage)
-Check memory leak (Browsers DevTools) 
-JS profiling and code optimization (Browsers DevTools)
-Gzip or compile gzip
-keep-alive header - same connection for several requests
-web-sockets
-Server asynchronous handlers
-Web-workers (long calculations, don't manipulate with DOM)
-Replace JS animation by CSS
-Async and Deffered script attributes (async for 3rd party scripts)
-User AMD (RequireJS or framework built-in)
-Virtual DOM
+Server-side caching (Redis, KeyValue storage)<br/>
+Check memory leak (Browsers DevTools)<br/>
+JS profiling and code optimization (Browsers DevTools)<br/>
+Gzip or compile gzip<br/>
+keep-alive header - same connection for several requests<br/>
+web-sockets<br/>
+Server asynchronous handlers<br/>
+Web-workers (long calculations, don't manipulate with DOM)<br/>
+Replace JS animation by CSS<br/>
+Async and Deffered script attributes (async for 3rd party scripts)<br/>
+User AMD (RequireJS or framework built-in)<br/>
+Virtual DOM<br/>
 
-* Why is it better to serve site assets from multiple domains?
-* How many resources will a browser download from a given domain at a time?
-depends on browser  2 - 8
-* If you jumped on a project and they used tabs and you used spaces, what would you do?
-  Generalize and document style guide. Suggest the project utilize something like EditorConfig (http://editorconfig.org)
-* Write a simple slideshow page
-  * Bonus points if it does not use JS.
-* If you could master one technology this year, what would it be?
-  Advanced algorithm's
-* Explain the importance of standards and standards bodies.
-  Without standards you cant be sure that you code or design works as you expect to.
-* What is FOUC? How do you avoid FOUC?
-  Flash of unstyled content. Put css in head. You can also made loader (but i did not like it)
+* Why is it better to serve site assets from multiple domains?<br/>
+* How many resources will a browser download from a given domain at a time?<br/>
+depends on browser  2 - 8<br/>
+* If you jumped on a project and they used tabs and you used spaces, what would you do?<br/>
+  Generalize and document style guide. Suggest the project utilize something like EditorConfig (http://editorconfig.org)<br/>
+* Write a simple slideshow page<br/>
+  * Bonus points if it does not use JS.<br/>
+* If you could master one technology this year, what would it be?<br/>
+  Advanced algorithm's<br/>
+* Explain the importance of standards and standards bodies.<br/>
+  Without standards you cant be sure that you code or design works as you expect to.<br/>
+* What is FOUC? How do you avoid FOUC?<br/>
+  Flash of unstyled content. Put css in head. You can also made loader (but i did not like it)<br/>
 
 
 **[[⬆]](#toc)**

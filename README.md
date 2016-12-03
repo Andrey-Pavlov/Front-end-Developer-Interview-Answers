@@ -38,54 +38,65 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 ####<a name='general'>General Questions:</a>
 
 * What did you learn yesterday/this week?
-- Depends on person. Me: vertical align by line-height
 
 * What excites or interests you about coding?
-- Depends on person. Me: I like bring life to interfaces
 
 * Talk about your preferred development environment. (OS, Editor, Browsers, Tools etc.)
-Windows (because of IE), webstorm, chrome, terminal
 
 * Can you describe your workflow when you create a web page?
-Write html -> add css -> add JS
-Run web storm and chrome
 
 * Can you describe the difference between progressive enhancement and graceful degradation?
 progressive enhancement - from less functionality growing to full functional
 graceful degradation - made full functional and then made fallbacks
   * Bonus points for describing feature detection
     check is feture is exist, use fallback if not
+    
 * Explain what "Semantic HTML" means.
- Html consist of only of information, all styling is on css
-* How would you optimize a websites assets/resources?
-  Minimize Http calls,
-  Use cdn,
-  Set expires headers
-  Use gzip
-  Put css on top
-  Put scripts on bottom
-  Make Javascript and css external
-  Minify Javascript and css
-  avoid redirects
-  reduce dom size
-  dont scale images on client
-
+ Html consist of only document structure information, without styling and behaviour
+ 
+* How would you optimize a websites assets/resources? (or just customer says: "Optimize my site!")
+What does it mean - "Optimize my site!". Figure out customer problems. (loading or rendering or markup or ...)
+Our tookls - dev tools, page speed, fiddler, wireshark
+Key measuremens - loading speed, number of requests, images sizes etc.
+Put css on top
+Put scripts on bottom
+Avoid @import in CSS (new request, DOM rerendering (reflow or repaint))
+Avoid DOM microinsertions in loop (use document.createElement())
+Listen bubbling event (don't add evetlistener for each "row" - save memory)
+Pagination, Visualization, Infinity Scroll (avoid fetch 10000 items to show only 10)
+Deffered plugins initialization (on first click, for example)
+Minimize Http calls,
+Bundling:
+  -css and js, spritesheets
+  -main and vendor
+  -add cache busting suffix
+Minification
+CDN (cache posibility, closer to user, CORS requests not icluded in browser number of requests restrictions)
+Cache headers: cache-control, expired, max-age, e-tag
+Images:
+ -Avoid image resize by css (4k image for icon)
+ -Server image resize (/img.png?w=100&h=100)
+ -Prevent images download before scroll to them (data-src => src)
+Server-side caching (Redis, KeyValue storage)
+Check memory leak (Browsers DevTools) 
+JS profiling and code optimization (Browsers DevTools)
+Gzip or compile gzip
+keep-alive header - same connection for several requests
+web-sockets
+Server asynchronous handlers
+Web-workers (long calculations, don't manipulate with DOM)
+Replace JS animation by CSS
+Async and Deffered script attributes (async for 3rd party scripts)
+User AMD (RequireJS or framework built-in)
+Virtual DOM
 
 * Why is it better to serve site assets from multiple domains?
-  * How many resources will a browser download from a given domain at a time?
-  depends on browser
-  2 - 8
-* Name 3 ways to decrease page load. (perceived or actual load time)
+* How many resources will a browser download from a given domain at a time?
+depends on browser  2 - 8
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
-  * Suggest the project utilize something like EditorConfig (http://editorconfig.org)
-  * Conform to the conventions (stay consistent)
-  * `issue :retab! command`
-  Me: change settings in my IDE
+  Generalize and document style guide. Suggest the project utilize something like EditorConfig (http://editorconfig.org)
 * Write a simple slideshow page
   * Bonus points if it does not use JS.
-* What tools do you use to test your code's performance?
-  * Profiler, JSPerf, Dromaeo
-  Google dev tools
 * If you could master one technology this year, what would it be?
   Advanced algorithm's
 * Explain the importance of standards and standards bodies.

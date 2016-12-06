@@ -313,6 +313,21 @@ function Person(){} var person = Person() var person = new Person()
 * Explain how you would get a query string parameter from the browser window's URL.
 * Explain the same-origin policy with regards to JavaScript.
 * Describe inheritance patterns in JavaScript.
+*Modern
+```
+Prototypal inheritance
+function object(o) {
+ function F() {}
+ F.prototype = o;
+ return new F();
+}
+
+Classical
+var child = Object.create(parent, {
+ age: { value: 2 } // ECMA5 descriptor
+});
+child.hasOwnProperty("age"); // true
+```
 * Make this work:
 ```javascript
 [1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]

@@ -97,6 +97,80 @@ depends on browser  2 - 8<br/>
   Generalize and document style guide. Suggest the project utilize something like EditorConfig (http://editorconfig.org)<br/>
 * Write a simple slideshow page<br/>
   * Bonus points if it does not use JS.<br/>
+```
+<section class="slideshow">
+  <div class="slideshow-container slide">
+    <img src="http://placeimg.com/625/225/any"/>
+    <img src="http://placeimg.com/625/225/animals"/>
+    <img src="http://placeimg.com/625/225/arch"/>
+  </div>
+</section>
+
+*slideshow styles*/
+
+.slideshow {
+  width: 625px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: solid 1px white;
+}
+
+.slideshow-container {
+  width: 2500px;
+  font-size: 0;
+  transition: 1s ease;
+  height: 225px;
+}
+
+.slideshow-container:hover {
+  animation-play-state: paused;
+}
+
+img {
+  width: 625px;
+  height: auto;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.slide {
+  animation: slide 24s ease infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }  
+  12.5% {
+    transform: translateX(0%);
+  }  
+  25% {
+    transform: translateX(-25%);
+  }  
+  37.5% {
+    transform: translateX(-25%);
+  }  
+  50% {
+    transform: translateX(-50%);
+  }  
+  62.5% {
+    transform: translateX(-50%);
+  }  
+  75% {
+    transform: translateX(-75%);
+  }  
+  87.5% {
+    transform: translateX(-75%);
+  }  
+  99% {
+    transform: translateX(-75%);
+  }  
+  100% {
+    transform: translateX(0);
+  }
+}
+```
 * If you could master one technology this year, what would it be?<br/>
   Advanced algorithm's<br/>
 * Explain the importance of standards and standards bodies.<br/>
